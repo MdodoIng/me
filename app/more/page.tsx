@@ -1,26 +1,11 @@
+import projects from "@/libs/content/projects";
 import Link from "next/link";
 import { Fragment } from "react";
 
 const More = () => {
-  const data = [
-    {
-      title: "easydine",
-      link: "easydine.net",
-      year: "2024",
-      subtitle: "Seamless Multiplayer for unity",
-      workType: "w/ The Collected Works",
-    },
-    {
-      title: "easydine",
-      link: "easydine.net",
-      year: "2024",
-      subtitle: "Seamless Multiplayer for unity",
-      workType: "w/ The Collected Works",
-    },
-  ];
   return (
     <menu className="wrapper grid gap-2">
-      {data.map((item, idx) => (
+      {projects.map((item, idx) => (
         <Fragment key={idx}>
           <Link
             target="_blank"
@@ -37,7 +22,7 @@ const More = () => {
               <span className="opacity-60">{item.workType}</span>
             </div>
           </Link>
-          {idx !== data.length - 1 && <hr className="opacity-20" />}
+          {idx !== projects.length - 1 && <hr className="opacity-20" />}
         </Fragment>
       ))}
     </menu>
