@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import Layout from "@/components/Layout";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ameen mK Portfolio",
-  description: "Welcome to Ameen mK's professional portfolio website.",
+  title: "Ameen Mk Portfolio",
+  description: "Welcome to Ameen Mk's professional portfolio website.",
 };
 
 export default function RootLayout({
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col w-full min-h-dvh py-10`}
       >
         <Layout>{children}</Layout>
+        <GoogleAnalytics gaId="GTM-NM82WF8T" />
       </body>
     </html>
   );
