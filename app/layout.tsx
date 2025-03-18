@@ -30,8 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col w-full min-h-dvh py-10`}
       >
         <Layout>{children}</Layout>
-        <GoogleAnalytics gaId="GTM-NM82WF8T" />
-        <GoogleAnalytics gaId="G-D6PF2TLVEJ" />
+        <GoogleAnalytics gaId="G-CWF75MZKHK" />
       </body>
     </html>
   );
