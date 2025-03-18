@@ -13,7 +13,7 @@ const More = () => {
             className="flex items-center justify-between"
           >
             <div className="grid ">
-              <h2 className="text-xl">{item.title}</h2>
+              <h2 className="text-base">{item.title}</h2>
               <span className="opacity-60">{item.subtitle}</span>
             </div>
             <div className="grid justify-items-end">
