@@ -17,6 +17,12 @@ const Header = () => {
             src={isHome ? mOImg : mCImg}
             alt={isHome ? "open" : "close"}
             className="size-14"
+            quality={0.3}
+            width={56}
+            height={56}
+            unoptimized={false}
+            placeholder="empty"
+            loading="eager"
           />
         </Link>
       </nav>
