@@ -22,7 +22,6 @@ const Header = () => {
               quality={0.3}
               width={56}
               height={56}
-              onLoad={}
               unoptimized={false}
               placeholder="empty"
               loading="eager"
