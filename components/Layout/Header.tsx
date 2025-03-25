@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       <nav className={`wrapper pb-10 flex justify-end`}>
-        <Link href={isHome ? "/more" : "/"} prefetch={false}>
+        <Link href={isHome ? "/more" : "/"} prefetch={false} shallow>
           <Suspense fallback={<>{isHome ? "More" : "Less"}</>}>
             <Image
               src={isHome ? mOImg : mCImg}
