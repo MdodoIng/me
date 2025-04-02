@@ -22,7 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` antialiased flex flex-col w-full min-h-dvh py-10`}>
-        <Layout>{children}</Layout>
+        <Layout>
+          {/* <ViewTransition>{children}</ViewTransition> */}
+
+          {children}
+        </Layout>
         <GoogleAnalytics gaId="G-CWF75MZKHK" />
       </body>
     </html>
