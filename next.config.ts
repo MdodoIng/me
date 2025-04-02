@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    viewTransition : true
+  },
   basePath:  "/me",
   assetPrefix: "/me",
 };
