@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Layout from "@/components/Layout";
-import React, { unstable_ViewTransition as ViewTransition } from "react";
+import React from "react";
+// import { ViewTransition } from "@/libs/helpers";
 const GoogleAnalytics = React.lazy(() =>
   import("@next/third-parties/google").then((module) => ({
     default: module.GoogleAnalytics,
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={` antialiased flex flex-col w-full min-h-dvh py-10`}>
         <Layout>
-          <ViewTransition>{children}</ViewTransition>
+          {/* <ViewTransition>{children}</ViewTransition> */}
+
+          {children}
         </Layout>
         <GoogleAnalytics gaId="G-CWF75MZKHK" />
       </body>
