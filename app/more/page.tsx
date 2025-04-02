@@ -1,6 +1,6 @@
-import projects from "@/libs/content/projects";
-import Link from "next/link";
-import { Fragment, Suspense } from "react";
+// import projects from "@/libs/content/projects";
+// import Link from "next/link";
+// import { Fragment, Suspense } from "react";
 
 const More = () => {
   return (
