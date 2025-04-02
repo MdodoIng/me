@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   /* config options here */
   output: "export",
@@ -7,10 +9,12 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   experimental: {
-    viewTransition : true
+    viewTransition: true,
   },
-  basePath:  "/me",
-  assetPrefix: "/me",
+  ...(isProd && {
+    basePath: "/me",
+    assetPrefix: "/me",
+  }),
 };
 
 export default nextConfig;
