@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { isGithubPages } from "@/libs/helpers";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -11,10 +12,11 @@ const nextConfig: NextConfig = {
   experimental: {
     viewTransition: true,
   },
-  ...(isProd && {
-    basePath: "/me",
-    assetPrefix: "/me",
-  }),
+  ...(isProd &&
+    isGithubPages && {
+      basePath: "/me",
+      assetPrefix: "/me",
+    }),
 };
 
 export default nextConfig;
