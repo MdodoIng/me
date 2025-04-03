@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Layout from "@/components/Layout";
 import React from "react";
-import { isGithubPages, ViewTransition } from "@/libs/helpers";
 const GoogleAnalytics = React.lazy(() =>
   import("@next/third-parties/google").then((module) => ({
     default: module.GoogleAnalytics,
@@ -22,13 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` antialiased flex flex-col w-full min-h-dvh py-10`}>
-        <Layout>
-          {isGithubPages ? (
-            children
-          ) : (
-            <ViewTransition>{children}</ViewTransition>
-          )}
-        </Layout>
+        <Layout>{children}</Layout>
         <GoogleAnalytics gaId="G-CWF75MZKHK" />
       </body>
     </html>
