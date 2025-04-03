@@ -1,9 +1,9 @@
 # My Portfolio
 
 
-🔗 Live: [mdodoing.github.io/me](https://mdodoing.github.io/me/)
+🔗 Live: [website](https://mdodoing.github.io/me/)
 
-🔗 Experimental: [mdodoing.github.io/me](https://mdodoing.github.io/me/)
+🔗 Experimental: [website](https://portfolio-ameen.vercel.app/)
 
 This is my personal portfolio showcasing my projects, skills, and experience.
 
