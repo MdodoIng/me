@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Layout from "@/components/Layout";
 import React from "react";
-import { isGithubPages, ViewTransition } from "@/libs/helpers";
+import { ViewTransition } from "@/libs/helpers";
 const GoogleAnalytics = React.lazy(() =>
   import("@next/third-parties/google").then((module) => ({
     default: module.GoogleAnalytics,
   }))
 );
+
+const isGithubPages = Boolean(process.env.IS_GITHUB_PAGES ?? false);
 
 export const metadata: Metadata = {
   title: "Ameen Mk Portfolio",

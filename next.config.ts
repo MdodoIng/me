@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
-import { isGithubPages } from "@/libs/helpers";
 
 const isProd = process.env.NODE_ENV === "production";
+const isGithubPages = Boolean(process.env.IS_GITHUB_PAGES ?? false);
+
 
 const nextConfig: NextConfig = {
   /* config options here */
